@@ -1,0 +1,12 @@
+canvas {
+  border:10px solid black;
+  height:300px;
+  width:450px;
+}
+#game1div{
+  float:left;
+  margin:auto;
+}
+#game2div{
+  float:left;
+}

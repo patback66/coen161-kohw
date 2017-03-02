@@ -3,10 +3,12 @@
 <head>
 
 <link rel="stylesheet" type="text/css" href="sidebar-css.css">
-
+<link rel="stylesheet" type="text/css" href="game.css">
 </head>
-<body>
+<body onload = "startGame(), play_game()">
 <script src="sidebar-js.js"></script>
+<script src="game1.js"></script>
+<script src="game2.js"></script>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -20,7 +22,7 @@
 
 </div>
 
-  
+
 
 <div id="main">
 <div id="nav-top">
@@ -32,8 +34,21 @@
 </nav>
   <h2>Activities</h2>
   <p>This is where they will come to see examples of the activities we do</p>
-  
+<div id ="game1div">
+  <h3>Helicopter Game</h3>
+  <div id="game1">
+  </div>
+  <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+  <p>Click the ACCELERATE button to start the game</p>
+  <p>How long can you stay alive? Use the ACCELERATE button to stay in the air..</p>
+</div>
+<div id ="game2div">
+<h3>Snake Game</h3>
+<div id="msg"></div>
+<canvas id="playArea" width="450" height="300">Sorry your browser does not support HTML5</canvas>
+<div>
+<p>Use arrow keys to move. Spacebar to pause.</p>
 </div>
 
 </body>
-</html> 
+</html>
