@@ -1,14 +1,22 @@
 <?php
 
 $host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password=""; // Mysql password 
-$db_name="KOWH"; // Database name 
+$username="client"; // Mysql username 
+$password="coen161"; // Mysql password 
+$db_name="KOHW"; // Database name 
 $tbl_name="forum_question"; // Table name 
 
 // Connect to server and select database.
 mysql_connect("$host", "$username", "$password", "$db_name")or die("cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");
+/*try {
+   $conn = new PDO("mysql:host=$host;dbname=$db_name", $username, $password);
+   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e)
+{
+   echo "Connection failed: " . $e->getMessage();
+}*/
 
 // get data that sent from form 
 $topic=$_POST['topic'];

@@ -7,14 +7,14 @@ $db_name="KOHW"; // Database name
 $tbl_name="forum_question"; // Table name 
 
 // Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
+$con = mysqli_connect("$host", "$username", "$password") or die("Connection Problem" . mysqli_errno($con));
+$database = mysqli_select_db($con, "$db_name") or die("SQL Problem" . mysqli_error($con));
 
 // get value of id that sent from address bar 
 $id=$_GET['id'];
 $sql="SELECT * FROM $tbl_name WHERE id='$id'";
-$result=mysql_query($sql);
-$rows=mysql_fetch_array($result);
+$result=mysqli_query($con, $sql);
+$rows=mysqli_fetch_array($result, MYSQL_ASSOC);
 ?>
 
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
@@ -44,8 +44,8 @@ $rows=mysql_fetch_array($result);
 
 $tbl_name2="forum_answer"; // Switch to table "forum_answer"
 $sql2="SELECT * FROM $tbl_name2 WHERE question_id='$id'";
-$result2=mysql_query($sql2);
-while($rows=mysql_fetch_array($result2)){
+$result2=mysqli_query($con, $sql2);
+while($rows=mysqli_fetch_array($result2, MYSQL_ASSOC)){
 ?>
 
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
@@ -84,22 +84,22 @@ while($rows=mysql_fetch_array($result2)){
 }
 
 $sql3="SELECT view FROM $tbl_name WHERE id='$id'";
-$result3=mysql_query($sql3);
-$rows=mysql_fetch_array($result3);
+$result3=mysqli_query($con, $sql3);
+$rows=mysqli_fetch_array($result3, MYSQL_ASSOC);
 $view=$rows['view'];
  
 // if have no counter value set counter = 1
 if(empty($view)){
 $view=1;
 $sql4="INSERT INTO $tbl_name(view) VALUES('$view') WHERE id='$id'";
-$result4=mysql_query($sql4);
+$result4=mysqli_query($con, $sql4);
 }
  
 // count more value
 $addview=$view+1;
 $sql5="update $tbl_name set view='$addview' WHERE id='$id'";
-$result5=mysql_query($sql5);
-mysql_close();
+$result5=mysqli_query($con, $sql5);
+mysqli_close($con);
 ?>
 
 <BR>
@@ -129,6 +129,7 @@ mysql_close();
 <td><input type="submit" name="Submit" value="Submit"> <input type="reset" name="Submit2" value="Reset"></td>
 </tr>
 </table>
+<a href="main_forum.php">Return</a>
 </td>
 </form>
 </tr>

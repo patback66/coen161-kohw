@@ -32,6 +32,7 @@
 <td><input type="submit" name="Submit" value="Submit" /> <input type="reset" name="Submit2" value="Reset" /></td>
 </tr>
 </table>
+<a href="main_forum.php">Return</a>
 </td>
 </form>
 </tr>
