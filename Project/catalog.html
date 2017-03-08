@@ -1,37 +1,241 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
-<link rel="stylesheet" type="text/css" href="sidebar-css.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> KOWH Camps Catalog  </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="sidebar-css.css">
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
+
 <body>
-<script src="sidebar-js.js"></script>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="home.html">Home</a>
-  <a href="registration.html">Schedule and Registration</a>
-  <a href="catalog.html">Catalog</a>
-  <a href="forum.html">Forum</a>
+  <a href="registration.html">Register Now!</a>
+  <a href="catalog.html">Dates and Rates</a>
+  <a href="forum.html">Forums</a>
   <a href="visualization.html">Visualization</a>
   <a href="activities.html">Activities</a>
   <a href="contact.html">Contact</a>
 
 </div>
 
+    <!-- Navigation -->
+    
 <div id="main">
-<div id="nav-top">
-  <nav>
-    <ul>
-      <li><a class="active" href="#home" onclick="openNav()">&#9776; Menu</a></li>
-      <li class="active" style="float:right"><a href="#about">Log In</a></li>
-    </ul>
-</nav>
-  <h2>Catalog</h2>
-  <p>This is where they will come to Look at what we have to offer</p>
-  
-</div>
+    <div id="nav-top">
+      <nav>
+            <ul>
+              <li><a class="active" href="#home" onclick="openNav()">&#9776; Menu</a></li>
+              <li><a href="#dates">Dates and Rates</a></li>
+              <li><a href="#question">FAQ</a></li>
+              <li class="active" style="float:right"><a href="#about">Log In</a></li>
+            </ul>
+        </nav>
+    </div>
+
+   
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="waterfront.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="campfire.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="creek.jpg" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id = "dates" class="row">
+                    <div class="col-lg-12">
+                        <h1> Dates and Rates</h1>
+                        <p>The camp sessions are four weeks and six weeks. There is also a limited two-week option for new campers ages 8-10. We try to keep our fares low so as to enable more parents to be able to afford the full summer experience for their children. </p>
+                    </div>
+                    <div class="col-lg-12">
+                        <h3 class="page-header" style="color: green;">Standard sessions</h3>
+                            <pre>4 week session     June 24-July 22       $4,960</pre>
+                            <pre>3 week session     July 23-August 13     $3,720</pre>
+
+                        <h3 class="page-header" style="color: green;">Starter sessions</h3>
+                        <p>First time camp program for kids currently entering grades 3-7.</pre>
+                        <pre>2 week session    June 24-July 8       $2,995</pre>
+                        <pre>2 week session    July 23-August 5     $2,995</pre>
+                        <pre>2 week session (ages 8-10 only)    July 9-July 22   $2,995</pre>
+                        
+
+                        <h3 class="page-header" style="color: green;">Extended sessions</h3>
+                        <pre>5 week session     July 9-August 13     $6,100</pre>
+                        <pre>7 week session     June 24-August 13    $7,900</pre>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- Portfolio Section -->
+        <div class="row">
+            <div class="col-lg-12">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img class="img-responsive img-portfolio img-hover" src="tennis-camp.jpg" alt="">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img class="img-responsive img-portfolio img-hover" src="activities-01.jpg" alt="">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img class="img-responsive img-portfolio img-hover" src="Kids_Soccer.jpg" alt="">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img class="img-responsive img-portfolio img-hover" src="SuperHeros.jpg" alt="">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img class="img-responsive img-portfolio img-hover" src="zipline.jpg" alt="">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img class="img-responsive img-portfolio img-hover" src="tackling.jpg" alt="">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 id = "question" class="page-header">
+                    FAQ
+                </h1>
+                <p>Here are some of the common questions parents and campers have:</p>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i> What is your admission policy?</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>KOHW Camps accepts all children who can participate in and benefit from our full in-camp and wilderness travel program regardless of race, color, religion or national origin.</p>
+                        <a href="forum.html" class="btn btn-default">Forum</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i> Are scholarships available? </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Financial aid is available to campers and families who would not otherwise be able to attend. Most aid is partial. For further information, email KOWH@gmail.com.</p>
+                        <a href="forum.html" class="btn btn-default">Forum</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i>When may I visit my camper?</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Parents are welcome to visit Songadeewin anytime after the first two weeks of their child’s stay. The best time to visit, however, is at mid-season on the last weekend of the first session, when there are special events for both parents and campers. We try to be as flexible as possible with parents’ schedules but we can’t change trip assignments to suit your visit. Please call ahead to be sure your child is not out on a trip! </p>
+                        <a href="forum.html" class="btn btn-default">Forum</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Call to Action Section -->
+        <div class="well">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Campers must be physically and emotionally prepared to fully participate in the programs that KOWH Camps offers.  Songadeewin of Keewaydin accepts all children who meet the criteria for admission regardless of race, ethnicity, disability, religion, sexual orientation or national origin.</p>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-lg btn-default btn-block" href="registration.html">Register Now!</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p> <img src="logo.png" alt="logo" height="100" width="100">Copyright &copy; KOWH Camps 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="sidebar-js.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
 
 </body>
-</html> 
+
+</html>

@@ -1,54 +1,263 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
-<link rel="stylesheet" type="text/css" href="sidebar-css.css">
-<link rel="stylesheet" type="text/css" href="game.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> KOWH Camps Catalog  </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="sidebar-css.css">
+    <!-- Custom CSS -->
+    <link href="css/half-slider.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <!-- Custom CSS -->
+   <link href="css/modern-business.css" rel="stylesheet">
+   <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body onload = "startGame(), play_game()">
-<script src="sidebar-js.js"></script>
-<script src="game1.js"></script>
-<script src="game2.js"></script>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="home.html">Home</a>
-  <a href="registration.html">Schedule and Registration</a>
-  <a href="catalog.html">Catalog</a>
-  <a href="forum.html">Forum</a>
+  <a href="registration.html">Register Now!</a>
+  <a href="catalog.html">Dates and Rates</a>
+  <a href="forum.html">Forums</a>
   <a href="visualization.html">Visualization</a>
   <a href="activities.html">Activities</a>
   <a href="contact.html">Contact</a>
 
 </div>
 
-
-
+    <!-- Navigation -->
+    
 <div id="main">
 <div id="nav-top">
   <nav>
     <ul>
       <li><a class="active" href="#home" onclick="openNav()">&#9776; Menu</a></li>
+      <li><a href="#do">What We Do</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#games">Games</a></li>
       <li class="active" style="float:right"><a href="#about">Log In</a></li>
     </ul>
+
 </nav>
-  <h2>Activities</h2>
-  <p>This is where they will come to see examples of the activities we do</p>
-<div id ="game1div">
-  <h3>Helicopter Game</h3>
-  <div id="game1">
-  </div>
-  <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-  <p>Click the ACCELERATE button to start the game</p>
-  <p>How long can you stay alive? Use the ACCELERATE button to stay in the air..</p>
+
 </div>
-<div id ="game2div">
-<h3>Snake Game</h3>
-<div id="msg"></div>
-<canvas id="playArea" width="450" height="300">Sorry your browser does not support HTML5</canvas>
-<div>
-<p>Use arrow keys to move. Spacebar to pause.</p>
+    
+    
+<!-- Page Content -->
+    <div class="container">
+        <div class="row">
+        <!-- /.container -->
+            <div class="col-lg-12">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="archer.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="crafts.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="kids-mountain.jpg" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        <!-- Controls -->
+   </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 id="do">What We Do</h2>
+                <p>We offer a wide variety of options in out camps! From one to three week programs, you're kids will come home begging to retun. </p>
+                <p>Every day is a new adventure at KOWH Camps. Our extensive range of activity options offers campers incredible ways to grow and have fun. As campers take on new challenges and enjoy old favorites, they develop their skills and confidence, all while having the time of their lives.</p>
+
+                <p>Our  program is built around our three fields – athletics, arts, and adventure. In addition, we have exclusive KOWH Camp activities created by our very own counselors. As you’ll see below, the broad range of activity choices offers something for every camper every day!</p>
+
+                <p> Enroll now to jump start your childs summer experience!</p>
+                <p>
+                    <a class="btn btn-default btn-lg" href="registration.html">Enroll Now! &raquo;</a>
+                </p>
+            </div>
+            <div class="col-sm-4">
+            <img src="logo.png" alt="logo" height="100" width="100">
+                <h2>Contact Us</h2>
+                <address>
+                    <strong>KOWH Camps</strong>
+                    <br>500 El Camino Real
+                    <br>Santa Clara, CA 95053
+                    <br>
+                </address>
+                <address>
+                    <abbr title="Phone">Phone:</abbr>(123) 456-7890
+                    <br>
+                    <abbr title="Email">Email:</abbr> <a href="mailto:#">KOHK@gmail.com</a>
+                </address>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+        <h1 id="activities">Activities </h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="img-circle img-responsive img-center" src="active.jpg" alt="active">
+                <h2>Athletics</h2>
+                <p>The athletics trail consists of a wide variety of both individual and team sports. Campers improve their skills, learn new ones, and most of all have fun!</p>
+                <ol style="list-style-type:disc">
+                    <li> Tennis </li> <br>
+                    <li> Soccer </li> <br>
+                    <li> Basketball </li> <br>
+                    <li> Skate Park </li> <br>
+                    <li> Fencing </li> <br>
+                    <li> Football </li> <br>
+                    <li> Martial Arts </li> <br>
+                    <li> Ultimate Frisbee </li> <br>
+                    <li> Volleyball </li> <br>
+                    <li> Baseball </li> <br>
+                    <li> Mountain Biking </li> <br>
+                    <li> Horseback Riding </li> <br>
+                    <li> Table Tennis </li> <br>
+                    <li> Lacrosse </li> <br>
+                    <li> Yoga </li> <br>
+                    <li> Meditation </li> <br>
+                </ol>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-circle img-responsive img-center" src="art.jpg" alt="art">
+                <h2>Arts and Crafts</h2>
+                <p>The arts trail consists of creative and performing arts and gives campers the opportunity to express themselves and create their own personal masterpieces.</p>
+                <ol style="list-style-type:disc">
+                    <li> Woodworking </li> <br>
+                    <li> Theater </li> <br>
+                    <li> Pottery </li> <br>
+                    <li> Tie-dye </li> <br>
+                    <li> Sewing </li> <br>
+                    <li> Friendship Bracelets </li> <br>
+                    <li> Guitar </li> <br>
+                    <li> Video </li> <br>
+                    <li> Computer Coding </li> <br>
+                    <li> Arts and Crafts </li> <br>
+                    <li> Dance </li> <br>
+                    <li> Cooking </li> <br>
+                    <li> Table Tennis </li> <br>
+                    <li> Wacky Science </li> <br>
+                </ol>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-circle img-responsive img-center" src="adventure.jpg" alt="adventure">
+                <h2>Adventure</h2>
+                <p>The adventure trail gives campers the opportunity to test their limits, push their boundaries, learn teamwork, overcome obstacles and reach new heights.</p>
+                 <ol style="list-style-type:disc">
+                    <li> High Ropes Course </li> <br>
+                    <li> Low Ropes Course </li> <br>
+                    <li> Climbing Wall </li> <br>
+                    <li> Vertical Playground </li> <br>
+                    <li> Leap of Faith </li> <br>
+                    <li> Friendship Bracelets </li> <br>
+                    <li> Team Building </li> <br>
+                    <li> Giant Swing </li> <br>
+                    <li> Archery </li> <br>
+                    <li> Hiking </li> <br>
+                    <li> Go-Karts </li> <br>
+                    <li> Nature Study </li> <br>
+                    <li> Tent Camping </li> <br>
+                    <li> Kayaking </li> <br>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+        
+       
+        <hr>
+       <div id="games">
+        <h2>Activity Examples </h2>
+      <p>Here are just a couple of games your kids can learn to write up in our copmuter coding activity. Feel free to play and enjoy yourself!</p>
+
+      <div id ="game1div">
+        <h3>Helicopter Game</h3>
+        <div id="game1"> </div>
+        <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+        <p>Click the ACCELERATE button to start the game</p>
+        <p>How long can you stay alive? Use the ACCELERATE button to stay in the air..</p>
+      </div>
+
+      <div id ="game2div">
+        <h3>Snake Game</h3>
+        <div id="msg"></div>
+        <canvas id="playArea" width="450" height="300">Sorry your browser does not support HTML5</canvas>
+
+        <div> <p>Use arrow keys to move. Spacebar to pause.</p> </div>
+      </div>
+      </div>
+    </div>
 </div>
+    <hr>
+
+     <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p> <img src="logo.png" alt="logo" height="100" width="100">Copyright &copy; KOWH Camps 2017</p>
+                   <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                </div>
+            </div>
+
+        </footer>
+
+    <script src="game1.js"></script>
+    <script src="game2.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="sidebar-js.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
 
 </body>
+
 </html>
