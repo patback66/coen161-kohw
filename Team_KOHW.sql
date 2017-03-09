@@ -4,7 +4,7 @@ CREATE TABLE RegisteredUser (
 	FirstName	char(20),
 	Street		varchar(20),
 	City		varchar(20),
-	Zip		integer,
+	Zip			integer,
 	Email		varchar(30),
 	Phone		integer,
 	Kids		integer,
@@ -63,3 +63,25 @@ CREATE TABLE Order (
 	ItemQuantity	integer,
 	ItemPrice	integer,
 CONSTRAINT Order_fkey FOREIGN KEY(OrderItemID) REFERENCES StoreItem(ItemID));
+
+CREATE TABLE Registration (
+	RegID		char(4) PRIMARY KEY,
+	UserID		char(4),
+	childID		char(4),
+	CampID		char(4),
+	CampLength  varchar(10),
+	Season		varchar(10),
+	ActivityID	char(4),
+CONSTRAINT Registration_fkey1 FOREIGN KEY(UserID) REFERENCES RegisteredUser(UserID),
+CONSTRAINT Registration_fkey2 FOREIGN KEY(childID) REFERENCES Kids(childID),
+CONSTRAINT Registration_fkey3 FOREIGN KEY(CampID) REFERENCES Camp(CampID),
+CONSTRAINT Registration_fkey4 FOREIGN KEY(Season) REFERENCES Camp(Season),
+CONSTRAINT Registration_fkey5 FOREIGN KEY(ActivityID) REFERENCES Activity(ActivityID));
+
+CREATE TABLE Activity (
+	ActivityID	char(4) PRIMARY KEY,
+	Name		varchar(30),
+	Description varchar(256),
+	Season		varchar(10),
+CONSTRAINT Activity_cons1 CHECK (Season in ('Summer','Winter','Both'));
+	
