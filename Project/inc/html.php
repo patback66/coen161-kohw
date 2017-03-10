@@ -40,7 +40,7 @@ function pageFooter() {
 
 	return <<<EOF
 		<div class="footer">
-			- <a href="http://www.2chan.net" target="_top">futaba</a> + <a href="http://www.1chan.net" target="_top">futallaby</a> + <a href="https://github.com/tslocum/TinyIB" target="_top">tinyib</a> -
+			- Forked from <a href="https://github.com/tslocum/TinyIB" target="_top">tinyib</a> -
 		</div>
 	</body>
 </html>
@@ -365,8 +365,8 @@ EOF;
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="home.html">Home</a>
-			<a href="registration.html">Schedule and Registration</a>
-			<a href="catalog.html">Catalog</a>
+			<a href="registration.html">Register Now!</a>
+ 			<a href="catalog.html">Dates and Rates</a>
 			<a href="forum.html">Forum</a>
 			<a href="visualization.html">Visualization</a>
 			<a href="activities.html">Activities</a>

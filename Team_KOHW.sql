@@ -1,14 +1,15 @@
-CREATE TABLE RegisteredUser (
-	userID		char(4) PRIMARY KEY,
-	LastName	char(20),
-	FirstName	char(20),
-	Street		varchar(20),
-	City		varchar(20),
-	Zip		integer,
-	Email		varchar(30),
-	Phone		integer,
-	Kids		integer,
-	CampName	varchar(30),
+CREATE TABLE IF NOT EXISTS 'RegisteredUser' (
+	'userID'		char(4),
+	'LastName'	char(20),
+	'FirstName'	char(20),
+	'Street'		varchar(20),
+	'City'		varchar(20),
+	'Zip'		integer,
+	'Email'		varchar(30),
+	'Phone'		integer,
+	'Kids'		integer,
+	'CampName'	varchar(30),
+	PRIMARY KEY ('userID'),
 CONSTRAINT User_fkey FOREIGN KEY(CampName) REFERENCES Camp(Name));
 
 CREATE TABLE Kids (
