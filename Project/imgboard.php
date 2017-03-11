@@ -160,6 +160,7 @@ if (isset($_POST['message']) || isset($_POST['file'])) {
 			checkDuplicateFile($post['file_hex']);
 
 			$file_mime_split = explode(' ', trim(@shell_exec('file --mime-type ' . $_FILES['file']['tmp_name'])));
+			echo shell_exec('file --mime-type ' . $_FILES['file']['tmp_name']);
 			if (count($file_mime_split) > 0) {
 				$file_mime = strtolower(array_pop($file_mime_split));
 			} else {
