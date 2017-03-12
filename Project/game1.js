@@ -112,7 +112,7 @@ function everyinterval(n) {
 }
 
 function accelerate(n) {
-    if (!myGameArea.interval) {myGameArea.interval = setInterval(updateGameArea, 20);}
+    if (!myGameArea.interval) {myGameArea.interval = setInterval(updateGameArea, 10);}
 
     myGamePiece.gravity = n;
 }
