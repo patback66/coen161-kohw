@@ -6,6 +6,7 @@
 
 </head>
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="js/sidebar-js.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
@@ -33,8 +34,15 @@
   <h2>Visualization</h2>
   <p>This is where they will come to see our statistics </p>
   
-  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+  <div id="currentCampers" style="height: 400px; max-width: 600px; margin: 0 auto">
+  </div>
+  
+  <hr class="featurette-divider">
+  <!--<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>-->
+  
+  <div id="forumChart" style="height: 400px; margin: 0 auto"></div>
   <script src="js/charts.js"></script>
+  
   
 </div>
 

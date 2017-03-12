@@ -1,4 +1,90 @@
-Highcharts.chart('container', {
+function getCampData() {
+  var dataSet = [{"campid": 1,"name": "Apaches","currentKids": 5}, {"campid": 2,"name": "Eureka","currentKids": 87}, {"campid": 3,"name": "name ","currentKids": 0}, {"campid": 4,"name": "name ","currentKids": 0}, {"campid": 5,"name": "Apaches","currentKids": 5}, {"campid": 6,"name": "Eureka","currentKids": 4}, {"campid": 7,"name": "Santa Clara","currentKids": 24}, {"campid": 8,"name": "Tahoe South","currentKids": 27}, {"campid": 9,"name": "Boulder","currentKids": 21}, {"campid": 10,"name": "Chesapeake","currentKids": 15}, {"campid": 11,"name": "Grapefruit ressort","currentKids": 9}, {"campid": 12,"name": "Grapefruit ressort 2","currentKids": 37}, {"campid": 13,"name": "Little derby","currentKids": 42}, {"campid": 14,"name": "Sweet Bayou","currentKids": 20}, {"campid": 15,"name": "Nestor camp","currentKids": 10}, {"campid": 16,"name": "Lewis and Clark","currentKids": 22}, {"campid": 17,"name": "Robotics village","currentKids": 77}, {"campid": 18,"name": "Salt Camp","currentKids": 33}, {"campid": 19,"name": "Federal Camp","currentKids": 27}];
+  $.ajax({
+        url: '/coen161-kohw/Project/php/charts.php',
+        type: 'post',
+        data: {'do': 'getCampersPerLocation'},
+        dataType: "json",
+        success: function(msg) {
+            console.log(msg);
+            dataSet = msg["data"];
+            buildCampChart(dataSet);
+        },
+        error: function(xhr) {
+            console.log("An error occured: " + xhr.status + " " + xhr.statusText);
+            console.log(xhr.responseText);
+            buildForumChart(dataSet);
+        }
+    });
+}
+
+function buildCampChart(data) {
+  var kids = JSON.parse(data);
+  
+  //build data json
+  var jsonData = [];
+  var check = [{
+            name: 'Microsoft Internet Explorer',
+            y: 56.33
+        }, {
+            name: 'Chrome',
+            y: 24.03,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Firefox',
+            y: 10.38
+        }, {
+            name: 'Safari',
+            y: 4.77
+        }, {
+            name: 'Opera',
+            y: 0.91
+        }, {
+            name: 'Proprietary or Undetectable',
+            y: 0.2
+        }]
+  kids.forEach(function(kid) 
+  {
+          jsonData.push({"name":kid.name, "y":parseInt(kid.currentKids)});
+      
+  });
+  
+  Highcharts.chart('currentCampers', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Current Campers Registered (Last 30 Days)'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.y}</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.y}',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Camp Name',
+        colorByPoint: true,
+        data: jsonData
+    }]
+});
+}
+
+/*Highcharts.chart('container', {
     chart: {
         type: 'column'
     },
@@ -59,4 +145,74 @@ Highcharts.chart('container', {
         data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
 
     }]
+});*/
+
+var testData = [{"id": 1,"timestamp": 1488914681}, {"id": 2,"timestamp": 1488914793}, {"id": 3,"timestamp": 1488925958}, {"id": 4,"timestamp": 1488925981}, {"id": 5,"timestamp": 1488928550}, {"id": 7,"timestamp": 1488930808}, {"id": 8,"timestamp": 1488930843}, {"id": 9,"timestamp": 1489005293}];
+
+function getChartData() {
+  var posts = testData;
+  $.ajax({
+        url: '/coen161-kohw/Project/php/charts.php',
+        type: 'post',
+        data: {'do': 'getForumPosts'},
+        dataType: "json",
+        success: function(msg) {
+            console.log(msg);
+            posts = msg["data"];
+            buildForumChart(posts);
+        },
+        error: function(xhr) {
+            console.log("An error occured: " + xhr.status + " " + xhr.statusText);
+            console.log(xhr.responseText);
+            buildForumChart(posts);
+        }
+    });
+}
+
+function buildForumChart(data) {
+  var posts = JSON.parse(data);
+  
+  var ppm = [0,0,0,0,0,0,0,0,0,0,0,0];
+  for(var i = 0; i < posts.length; i++) {
+    var date = new Date(posts[i].timestamp * 1000);
+    var month = date.getMonth();
+    ppm[month]++;
+  }
+  Highcharts.chart('forumChart', {
+    chart: {
+        type: 'line'
+    },
+    title: {
+        text: 'Monthly Forum Posts'
+    },
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    yAxis: {
+        title: {
+            text: 'Number of Posts'
+        }
+    },
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: true
+            },
+            enableMouseTracking: false
+        }
+    },
+    series: [{
+        name: 'Number of Posts',
+        data: ppm
+    }]
+  });
+}
+function getData() {
+  
+}
+
+$( document ).ready(function() {
+    console.log( "building charts!" );
+    getCampData();
+    getChartData();
 });
