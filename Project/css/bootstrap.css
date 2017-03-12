@@ -12,6 +12,18 @@ html {
 body {
   margin: 0;
 }
+ #main{
+    background-color: gray;
+  }
+  .container{
+    background-color: #ededed;
+  }
+  footer{
+    background-color: #ededed;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 article,
 aside,
 details,
