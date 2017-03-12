@@ -42,8 +42,7 @@
 </div>
  <div class="container">
 
-    <form class="well form-horizontal"  id="contact_form" onsubmit="validateForm()">
- +    <form class="well form-horizontal"  id="contact_form" onsubmit="return validateForm(this)">
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
 <fieldset>
 
 <!-- Form Name -->
@@ -53,7 +52,7 @@
 <!-- Text input-->
 
 <hr>
-<legend style="font-size: 20px;">Camper Information</legend>
+<legend style="font-size: 20px;">Parent Information</legend>
 <div class="form-group">
   <label class="col-md-4 control-label">First Name</label>  
   <div class="col-md-4 inputGroupContainer">
@@ -261,12 +260,12 @@
     <div class="col-md-4">
         <div class="radio">
             <label>
-                <input type="radio" name="hosting" value="yes" /> Yes
+                <input type="radio" name="beenBeforeYes" value="yes" /> Yes
             </label>
         </div>
         <div class="radio">
             <label>
-                <input type="radio" name="hosting" value="no" /> No
+                <input type="radio" name="beenBeforeNo" value="no" /> No
             </label>
         </div>
     </div>
@@ -278,12 +277,12 @@
     <div class="col-md-4">
         <div class="radio">
             <label>
-                <input type="radio" name="hosting" value="yes" /> Yes
+                <input type="radio" name="allergiesYes" value="yes" /> Yes
             </label>
         </div>
         <div class="radio">
             <label>
-                <input type="radio" name="hosting" value="no" /> No
+                <input type="radio" name="allergiesNo" value="no" /> No
             </label>
         </div>
     </div>
@@ -301,78 +300,54 @@
 </div>
 <br><br>
 <legend style="font-size: 20px;">Session</legend>
-
-<div class="form-group"> 
-  <label class="col-md-4 control-label">Select Camp Location</label>
-    <div class="col-md-4 selectContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="location" class="form-control selectpicker" >
-        <option value=" " > Select Camp</option>
-        <option>Apaches </option>
-        <option>Boulder </option>
-        <option>Chesapeake</option>
-        <option>Eureka </option>
-        <option>Federal Camp</option>
-        <option>Grapefruit ressort</option>
-        <option>Grapefruit ressort 2</option>
-        <option>Lewis and Clark</option>
-        <option>Litle derby</option>
-        <option>Nestor camp</option>
-        <option>Robotics village</option>
-        <option>Salt Cam</option>
-        <option>Santa Clara</option>
-        <option>Sweet Bayou</option>
-    </select>
-  </div>
-</div>
-</div>
 <!-- radio checks -->
  <div class="form-group">
     <label class="col-md-4 control-label">Please Select One </label>
-    <div class="col-md-4">
+    <div class="col-md-4" id="session">
         <div class="radio">
             <label>
-                <input type="radio" name="hosting" value="yes" />7 week session (June 24-August 13) $7,900
+                <input type="radio" onclick="calcCost()" name="hosting" value="7900" checked="yes"/>7 week session (June 24-August 13) $7,900
             </label>
         </div>
         <div class="radio">
             <label>
-                <input type="radio" name="hosting" value="no" />5 week session (July 9-August 13) $6,100
+                <input type="radio" onclick="calcCost()" name="hosting" value="6100" />5 week session (July 9-August 13) $6,100
             </label>
         </div>
         <div class="radio">
             <label>
-                <input type="radio" name="hosting" value="no" />4 week session (June 24-July 22) $4,960
+                <input type="radio" onclick="calcCost()" name="hosting" value="4960" />4 week session (June 24-July 22) $4,960
             </label>
         </div>
         <div class="radio">
             <label>
-                <input type="radio" name="hosting" value="no" />3 week session (July 23-August 13) $3,720
+                <input type="radio" onclick="calcCost()" onclick="calcCost()" name="hosting" value="3720" />3 week session (July 23-August 13) $3,720
             </label>
         </div>
         <div class="radio">
             <label>
-                <input type="radio" name="hosting" value="no" />2 week session (June 24-July 8) $2,995
+                <input type="radio" onclick="calcCost()" name="hosting" value="2995" />2 week session (June 24-July 8) $2,995
             </label>
         </div>
         <div class="radio">
             <label>
-                <input type="radio" name="hosting" value="no" />2 week session (July 23-August 5) $2,995
+                <input type="radio" onclick="calcCost()" name="hosting" value="2995" />2 week session (July 23-August 5) $2,995
             </label>
         </div>
         <div class="radio">
             <label>
-                <input type="radio" name="hosting" value="no" />2 week session (ages 8-10 only) (July 9-July 22) $2,995
+                <input type="radio" onclick="calcCost()" name="hosting" value="2995" />2 week session (ages 8-10 only) (July 9-July 22) $2,995
             </label>
         </div>
     </div>
 </div>
 
+<div id="dynamicInput">
 <br><br>
-<legend style="font-size: 20px;">Parent Information</legend>
+<div id="camper1">
+<legend style="font-size: 20px;">Camper Information</legend>
 <div class="form-group">
-  <label class="col-md-4 control-label">Parent First Name</label>  
+  <label class="col-md-4 control-label">Camper First Name</label>  
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -384,7 +359,7 @@
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label" > Parent Last Name</label> 
+  <label class="col-md-4 control-label" > Camper Last Name</label> 
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -395,7 +370,7 @@
 
 <!-- Text input-->
        <div class="form-group">
-  <label class="col-md-4 control-label">Parent E-Mail</label>  
+  <label class="col-md-4 control-label">Camper E-Mail</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -408,7 +383,7 @@
 <!-- Text input-->
        
 <div class="form-group">
-  <label class="col-md-4 control-label">Parent Cell #</label>  
+  <label class="col-md-4 control-label">Camper Cell #</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
@@ -416,10 +391,15 @@
     </div>
   </div>
 </div>
+</div>
+</div>
+  
+<input type="button" value="Add another camper" class="btn" style="align:center" onClick="addInput('dynamicInput');">
 
 <br><br>
 <legend style="font-size: 20px;">Camp Deposit</legend>
-<h2 style="font-size: 15px;">Price: <span style="color: red"> $500.00 </span></h2>
+<h2 style="font-size: 15px;">Price: <span style="color: red" id="priceSpan"> $500.00 </span></h2>
+<input type="number" style="display:none" id="cost"/>
 <div class="credit-card-div">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -498,6 +478,7 @@
 
 </fieldset>
 </form>
+</div>
     </div><!-- /.container -->
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
