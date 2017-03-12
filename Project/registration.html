@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="css/sidebar-css.css">
 <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
   <script src="js/registration.js" type="text/javascript"></script>
-
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
   
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
@@ -20,11 +20,12 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="home.html">Home</a>
-  <a href="registration.html">Schedule and Registration</a>
-  <a href="catalog.html">Catalog</a>
+  <a href="registration.html">Register Now!</a>
+  <a href="catalog.html">Dates and Rates</a>
   <a href="forum.html">Forum</a>
   <a href="visualization.html">Visualization</a>
   <a href="activities.html">Activities</a>
+   <a href="store.html">Store</a>
   <a href="contact.html">Contact</a>
 
 </div>
@@ -34,9 +35,6 @@
   <nav>
     <ul>
       <li><a class="active" href="#home" onclick="openNav()">&#9776; Menu</a></li>
-      <li><a href="#introduction">Introduction</a></li>
-      <li><a href="#activities">Activities</a></li>
-      <li><a href="#map">Map</a></li>
       <li class="active" style="float:right"><a href="#about">Log In</a></li>
     </ul>
 </nav>
@@ -44,14 +42,17 @@
 </div>
  <div class="container">
 
-    <form class="well form-horizontal"  id="contact_form" onsubmit="return validateForm(this)">
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
 <fieldset>
 
 <!-- Form Name -->
-<legend>Register Now!</legend>
-
+<legend style="font-size: 50px;">Enroll</legend>
+<legend style="font-size: 30px;"> 2017 Camp Registrations</legend>
+<p>Thank you for registering your child. Please note: A non-refundable deposit of $500 is required with this application. (Deposits will be refunded if we are unable to accept a camper.)  </p>
 <!-- Text input-->
 
+<hr>
+<legend style="font-size: 20px;">Camper Information</legend>
 <div class="form-group">
   <label class="col-md-4 control-label">First Name</label>  
   <div class="col-md-4 inputGroupContainer">
@@ -75,6 +76,18 @@
 </div>
 
 <!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Nickname</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="nickname" placeholder="Nickname" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
        <div class="form-group">
   <label class="col-md-4 control-label">E-Mail</label>  
     <div class="col-md-4 inputGroupContainer">
@@ -89,7 +102,7 @@
 <!-- Text input-->
        
 <div class="form-group">
-  <label class="col-md-4 control-label">Phone #</label>  
+  <label class="col-md-4 control-label">Home Phone #</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
@@ -198,63 +211,33 @@
     </div>
 </div>
 </div>
-<legend>Now let's get some information about your camper</legend>
 
-<!--Camper Information-->
+<!-- Text input-->
+ 
 <div class="form-group">
-  <label class="col-md-4 control-label">Camper First Name</label>  
-  <div class="col-md-4 inputGroupContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="camper_first_name" placeholder="First Name" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-<div class="form-group">
-  <label class="col-md-4 control-label" >Camper Last Name</label> 
+  <label class="col-md-4 control-label">School</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="camper_last_name" placeholder="Last Name" class="form-control"  type="text">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="school" placeholder="School" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
-<!-- radio checks -->
- <div class="form-group">
-                        <label class="col-md-4 control-label">Does your camper have any allergies?</label>
-                        <div class="col-md-4">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="hosting" value="yes" /> Yes
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="hosting" value="no" /> No
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+<!-- Text input-->
+ 
+<div class="form-group">
+  <label class="col-md-4 control-label">Current Grade</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="grade" placeholder="Grade" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
 
-<!-- radio checks -->
- <div class="form-group">
-                        <label class="col-md-4 control-label">Has your camper been camping before?</label>
-                        <div class="col-md-4">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="hosting" value="yes" /> Yes
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="hosting" value="no" /> No
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+<!-- Text input-->
 
-  
 <div class="form-group"> 
   <label class="col-md-4 control-label">Age</label>
     <div class="col-md-4 selectContainer">
@@ -271,6 +254,40 @@
 </div>
 </div>
 
+<!-- radio checks -->
+ <div class="form-group">
+    <label class="col-md-4 control-label">Has your camper been camping before?</label>
+    <div class="col-md-4">
+        <div class="radio">
+            <label>
+                <input type="radio" name="hosting" value="yes" /> Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="hosting" value="no" /> No
+            </label>
+        </div>
+    </div>
+</div>
+
+<!-- radio checks -->
+ <div class="form-group">
+    <label class="col-md-4 control-label">Does your camper have any allergies?</label>
+    <div class="col-md-4">
+        <div class="radio">
+            <label>
+                <input type="radio" name="hosting" value="yes" /> Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="hosting" value="no" /> No
+            </label>
+        </div>
+    </div>
+</div>
+
 <!-- Text area -->  
 <div class="form-group">
   <label class="col-md-4 control-label">Any Fun Facts?</label>
@@ -281,6 +298,165 @@
   </div>
   </div>
 </div>
+<br><br>
+<legend style="font-size: 20px;">Session</legend>
+<!-- radio checks -->
+ <div class="form-group">
+    <label class="col-md-4 control-label">Please Select One </label>
+    <div class="col-md-4">
+        <div class="radio">
+            <label>
+                <input type="radio" name="hosting" value="yes" />7 week session (June 24-August 13) $7,900
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="hosting" value="no" />5 week session (July 9-August 13) $6,100
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="hosting" value="no" />4 week session (June 24-July 22) $4,960
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="hosting" value="no" />3 week session (July 23-August 13) $3,720
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="hosting" value="no" />2 week session (June 24-July 8) $2,995
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="hosting" value="no" />2 week session (July 23-August 5) $2,995
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="hosting" value="no" />2 week session (ages 8-10 only) (July 9-July 22) $2,995
+            </label>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<legend style="font-size: 20px;">Parent Information</legend>
+<div class="form-group">
+  <label class="col-md-4 control-label">Parent First Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="parent_first_name" placeholder="First Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" > Parent Last Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="parent_last_name" placeholder="Last Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">Parent E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Parent Cell #</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<br><br>
+<legend style="font-size: 20px;">Camp Deposit</legend>
+<h2 style="font-size: 15px;">Price: <span style="color: red"> $500.00 </span></h2>
+<div class="credit-card-div">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <h5 class="text-muted"> Credit Card Number</h5>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font"> Expiry Month</span>
+                                <input type="text" class="form-control" placeholder="MM" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font">  Expiry Year</span>
+                                <input type="text" class="form-control" placeholder="YY" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font">  CCV</span>
+                                <input type="text" class="form-control" placeholder="CCV" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                            <br>
+                                <img src="data:image/png;base64,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" class="img-rounded" />
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-12 pad-adjust">
+                                <br>
+                                <input type="text" class="form-control" placeholder="Name On The Card" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pad-adjust">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" checked class="text-muted"> Save details for fast payments.
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                       
+
+                    </div>
+                </div>
+            </div>
+            <!-- CREDIT CARD DIV END -->
+
+
+
+
 
 <!-- Success message -->
 <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
@@ -313,10 +489,9 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p> <img src="logo.png" alt="logo" height="100" width="100">Copyright &copy; KOWH Camps 2017</p>
+                    <p> <img src="images/logo.png" alt="logo" height="100" width="100">Copyright &copy; KOWH Camps 2017</p>
                 </div>
             </div>
-
         </footer>
         </div>
 
