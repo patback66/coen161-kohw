@@ -12,13 +12,13 @@ function validateForm(form) {
   return true;
 }
 
-//submit in the form of:"[{"name":"first_name","value":"Matthew"},{"name":"last_name","value":"Koken"},{"name":"email","value":"maskoken@gmail.com"},{"name":"phone","value":"4084833696"},{"name":"address","value":"1632 Benton CT"},{"name":"city","value":"Sunnyvale"},{"name":"state","value":"California"},{"name":"zip","value":"94087"},{"name":"camper_first_name","value":"Matthew"},{"name":"camper_last_name","value":"Koken"},{"name":"hosting","value":"yes"},{"name":"state","value":"13-15"},{"name":"comment","value":"fun facts"}]"
+//submit in the form of:"[{"name":"LastName","value":"Koken"},{"name":"FirstName","value":"Matthew"},{"name":"Email","value":"maskoken@gmail.com"},{"name":"Phone","value":"4084833696"},{"name":"Street","value":"1632 Benton CT"},{"name":"City","value":"Sunnyvale"},{"name":"State","value":"California"},{"name":"Zip","value":"94087"},{"name":"KidLastName","value":"Koken"},{"name":"KidFirstName","value":"Matthew"},{"name":"Allergies","value":"yes"},{"name":"Age","value":"13-15"},{"name":"Comment","value":"fun facts"}]"
 function submit(form) {
   //ajax send to php
   var data = JSON.stringify( $(form).serializeArray() ); //  <-----------
 
   $.ajax({
-        url: 'registration.php',
+        url: '/coen161-kohw/Project/php/registration.php',
         type: 'post',
         data: {'data': data},
         dataType: "json",
@@ -29,7 +29,7 @@ function submit(form) {
 
         },
         error: function() {
-            console.log("[ERROR] Could not register.")
+            console.log("[ERROR] Could not register.");
         }
     });
   return false;
