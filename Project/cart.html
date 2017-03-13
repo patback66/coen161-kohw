@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="css/sidebar-css.css">
+<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+  <script src="js/registration.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+  
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
+<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/sidebar-js.js"></script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="home.html">Home</a>
+  <a href="registration.html">Register Now!</a>
+  <a href="catalog.html">Dates and Rates</a>
+  <a href="forum.html">Forum</a>
+  <a href="visualization.html">Visualization</a>
+  <a href="activities.html">Activities</a>
+   <a href="store.html">Store</a>
+  <a href="contact.html">Contact</a>
+
+</div>
+
+<div id="main">
+<div id="nav-top">
+  <nav>
+    <ul>
+      <li><a class="active" href="#home" onclick="openNav()">&#9776; Menu</a></li>
+      <li class="active" style="float:right"><a href="#about">Log In</a></li>
+    </ul>
+</nav>
+
+</div>
+ <div class="container">
+
+    <form class="well form-horizontal"  id="contact_form" onsubmit="validateForm()">
+ +    <form class="well form-horizontal"  id="contact_form" onsubmit="return validateForm(this)">
+<fieldset>
+
+<!-- Form Name -->
+<legend style="font-size: 50px;">Cart</legend>
+
+<!-- Text input-->
+
+<legend style="font-size: 20px;">Items for Purchase</legend>
+
+ <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/pillow.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$22.99</h4>
+                                <h4><a href="#">Memory Foam Pillow</a>
+                                </h4>
+                                <input  name="pillow" placeholder="# of Pillows" class="form-control"  type="text">
+
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/sweater.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="#">Patagonia Kids Sweater</a>
+                                </h4>
+                                 <input  name="sweater" placeholder="# of Sweaters" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/sunglasses.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$29.95</h4>
+                                <h4><a href="#">Sunglasses</a>
+                                </h4>
+                                 <input  name="glasses" placeholder="# of Sunglasses" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/shoe.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$34.99</h4>
+                                <h4><a href="#">Hiking Shoes</a>
+                                </h4>
+                                <input  name="shoes" placeholder="# of Hiking Shoes" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/waterBottle.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$19.95</h4>
+                                <h4><a href="#">Water Bottle  - 24 OZ</a>
+                                </h4>
+                                 <input  name="bottle" placeholder="# of Water Bottles" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/flashlight.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$16.99</h4>
+                                <h4><a href="#">Flash Light</a>
+                                </h4>
+                                 <input  name="light" placeholder="# of Flash Lights" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/backpack.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$35.99</h4>
+                                <h4><a href="#">Backpack</a>
+                                </h4>
+                                <input  name="backpack" placeholder="# of Backpacks" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/basket.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$13.99</h4>
+                                <h4><a href="#">Baskets</a>
+                                </h4>
+                                 <input  name="basket" placeholder="# of Baskets" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/sleepingbag.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$57.99</h4>
+                                <h4><a href="#">Sleeping Bag</a>
+                                </h4>
+                                <input  name="bag" placeholder="# of Sleeping Bags" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/carabiners.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$14.99</h4>
+                                <h4><a href="#">Carabiners</a>
+                                </h4>
+                                 <input  name="carabiners" placeholder="# of Carabiners" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/fan.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$79.99</h4>
+                                <h4><a href="#">Deluxe Fan</a>
+                                </h4>
+                                 <input  name="fan" placeholder="# of Fans" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+<br><br>
+<legend style="font-size: 20px;">Payment Information</legend>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Home Phone #</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+      
+<div class="form-group">
+  <label class="col-md-4 control-label">Address</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="address" placeholder="Address" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+ 
+<div class="form-group">
+  <label class="col-md-4 control-label">City</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="city" placeholder="city" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Select Basic -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">State</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="state" class="form-control selectpicker" >
+      <option value=" " >Please select your state</option>
+      <option>Alabama</option>
+      <option>Alaska</option>
+      <option >Arizona</option>
+      <option >Arkansas</option>
+      <option >California</option>
+      <option >Colorado</option>
+      <option >Connecticut</option>
+      <option >Delaware</option>
+      <option >District of Columbia</option>
+      <option> Florida</option>
+      <option >Georgia</option>
+      <option >Hawaii</option>
+      <option >daho</option>
+      <option >Illinois</option>
+      <option >Indiana</option>
+      <option >Iowa</option>
+      <option> Kansas</option>
+      <option >Kentucky</option>
+      <option >Louisiana</option>
+      <option>Maine</option>
+      <option >Maryland</option>
+      <option> Mass</option>
+      <option >Michigan</option>
+      <option >Minnesota</option>
+      <option>Mississippi</option>
+      <option>Missouri</option>
+      <option>Montana</option>
+      <option>Nebraska</option>
+      <option>Nevada</option>
+      <option>New Hampshire</option>
+      <option>New Jersey</option>
+      <option>New Mexico</option>
+      <option>New York</option>
+      <option>North Carolina</option>
+      <option>North Dakota</option>
+      <option>Ohio</option>
+      <option>Oklahoma</option>
+      <option>Oregon</option>
+      <option>Pennsylvania</option>
+      <option>Rhode Island</option>
+      <option>South Carolina</option>
+      <option>South Dakota</option>
+      <option>Tennessee</option>
+      <option>Texas</option>
+      <option> Uttah</option>
+      <option>Vermont</option>
+      <option>Virginia</option>
+      <option >Washington</option>
+      <option >West Virginia</option>
+      <option>Wisconsin</option>
+      <option >Wyoming</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Zip Code</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+    </div>
+</div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Enter Coupon Code</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <input name="code" placeholder="Coupon" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<div class="credit-card-div">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <h5 class="text-muted"> Credit Card Number</h5>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font"> Expiry Month</span>
+                                <input type="text" class="form-control" placeholder="MM" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font">  Expiry Year</span>
+                                <input type="text" class="form-control" placeholder="YY" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font">  CCV</span>
+                                <input type="text" class="form-control" placeholder="CCV" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                            <br>
+                                <img src="data:image/png;base64,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" class="img-rounded" />
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-12 pad-adjust">
+                                <br>
+                                <input type="text" class="form-control" placeholder="Name On The Card" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pad-adjust">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" checked class="text-muted"> Save details for fast payments.
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                       
+
+                    </div>
+                </div>
+            </div>
+            <!-- CREDIT CARD DIV END -->
+
+
+
+
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Your Purchase was received. Your items will be shipped and will arrive in 3-7 days. </div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" onclick="myFunction()"> Purchase <span class="glyphicon glyphicon-send" ></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+    </div><!-- /.container -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+    <script src="js/index.js"></script>
+    <script>
+      function myFunction() {
+          alert("Your Purchase was received. Your items will be shipped and will arrive in 3-7 days.");
+      }
+    </script>
+    <style type="text/css"> #success_message{ display: none;}</style>
+
+
+
+
+
+<hr class="featurette-divider">
+ <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p> <img src="images/logo.png" alt="logo" height="100" width="100">Copyright &copy; KOWH Camps 2017</p>
+                </div>
+            </div>
+        </footer>
+        </div>
+
+</body>
+</html> 
