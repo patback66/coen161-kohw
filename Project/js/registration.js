@@ -12,7 +12,7 @@ function validateForm(form) {
   return true;
 }
 
-//submit in the form of:"[{"name":"first_name","value":"Matthew"},{"name":"last_name","value":"Koken"},{"name":"email","value":"maskoken@gmail.com"},{"name":"phone","value":"4084833696"},{"name":"address","value":"1632 Benton CT"},{"name":"city","value":"Sunnyvale"},{"name":"state","value":"California"},{"name":"zip","value":"94087"},{"name":"camper_first_name","value":"Matthew"},{"name":"camper_last_name","value":"Koken"},{"name":"hosting","value":"yes"},{"name":"state","value":"13-15"},{"name":"comment","value":"fun facts"}]"
+//submit in the form of:"[{"name":"first_name","value":"Matthew"},{"name":"last_name","value":"Koken"},{"name":"nickname","value":"nname"},{"name":"email","value":"maskoken@gmail.com"},{"name":"phone","value":"4084833696"},{"name":"address","value":"1632 Benton CT"},{"name":"city","value":"Sunnyvale"},{"name":"state","value":"California"},{"name":"zip","value":"94087"},{"name":"school","value":"scu"},{"name":"grade","value":"senior"},{"name":"beenBeforeYes","value":"yes"},{"name":"allergiesNo","value":"no"},{"name":"comment","value":""},{"name":"hosting","value":"3720"},{"name":"camper_first_name","value":"Matthew"},{"name":"camper_last_name","value":"Koken"},{"name":"camper_age","value":"22"},{"name":"email","value":"maskoken@gmail.com"},{"name":"phone","value":"4084833696"},{"name":"camper_first_name","value":"fname"},{"name":"camper_last_name","value":"lname"},{"name":"camper_age","value":"213"},{"name":"email","value":"test@domain.com"},{"name":"phone","value":"1234567890"}]"
 function submit(form) {
   //ajax send to php
   var data = JSON.stringify( $(form).serializeArray() ); //  <-----------
@@ -53,7 +53,7 @@ function addInput(divName){
                   <div class="col-md-4 inputGroupContainer"> \
                   <div class="input-group"> \
                   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> \
-                  <input  name="parent_first_name" placeholder="First Name" class="form-control"  type="text"> \
+                  <input  name="camper_first_name" placeholder="First Name" class="form-control"  type="text"> \
                     </div> \
                   </div> \
                 </div>  \
@@ -65,10 +65,25 @@ function addInput(divName){
                     <div class="col-md-4 inputGroupContainer"> \
                     <div class="input-group"> \
                   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> \
-                  <input name="parent_last_name" placeholder="Last Name" class="form-control"  type="text"> \
+                  <input name="camper_last_name" placeholder="Last Name" class="form-control"  type="text"> \
                     </div> \
                   </div> \
                 </div> \
+                  \
+                    <!-- Text input--> \
+                    \
+                  <div class="form-group"> \
+                    <label class="col-md-4 control-label">Camper Age</label> \
+                      <div class="col-md-4 selectContainer"> \
+                      <div class="input-group"> \
+                        <div class="input-group"> \
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> \
+                       <input name="camper_age" placeholder="Last Name" class="form-control"  type="number"> \
+                      </div> \
+                    </div> \
+                  </div> \
+                  </div> \
+ \
                           \
                 <!-- Text input--> \
                        <div class="form-group"> \
