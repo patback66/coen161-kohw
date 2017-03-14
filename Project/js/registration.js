@@ -33,7 +33,20 @@ function submit(form) {
             return false;
         }
     });
+  var elt = document.getElementById("result");
+  var code = makeCode();
+  alert("Registration success! Here's a discount code for the store: " + code);
   //return false;
+}
+function makeCode()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
 }
 
 var counter = 1;
