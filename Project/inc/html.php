@@ -16,7 +16,7 @@ function pageHeader() {
 		<meta http-equiv="expires" content="0">
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
 		<meta http-equiv="pragma" content="no-cache">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="viewport" content="widthl=device-width,initial-scale=1">
 		<title>
 EOF;
 	$return .= TINYIB_BOARDDESC . <<<EOF
@@ -377,7 +377,7 @@ EOF;
 				<nav>
 					<ul class="main-nav">
 						<li><a class="active" href="#home" onclick="openNav()">&#9776; Menu</a></li>
-						<li class="active" style="float:right"><a href="#about">Log In</a>
+						<li class="active" style="float:right"><a href="login.html">Log In</a>
 					</ul>
 			</nav>
 		<div class="adminbar">

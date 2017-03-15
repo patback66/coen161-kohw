@@ -130,7 +130,7 @@ function addInput(divName){
 
 function calcCost() {
   //get cost from radio button
-  var cost = parseInt($("input[name=hosting]:checked").id());
+  var cost = parseInt($("input[name=hosting]:checked").attr("id"));
   
   //for each extra camper, discount
   if(counter > 1) {
