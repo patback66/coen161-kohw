@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="sidebar-css.css">
     <!-- Custom CSS -->
     <link href="css/half-slider.css" rel="stylesheet">
@@ -30,7 +31,7 @@
 
 </head>
 
-<body onload = "startGame(), play_game()">
+<body onload = "startGame()">
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -40,6 +41,7 @@
   <a href="forum.html">Forums</a>
   <a href="visualization.html">Visualization</a>
   <a href="activities.html">Activities</a>
+   <a href="store.html">Store</a>
   <a href="contact.html">Contact</a>
 
 </div>
@@ -79,13 +81,13 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img class="slide-image" src="archer.jpg" alt="">
+                                    <img class="slide-image" src="images/archer.jpg" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="crafts.jpg" alt="">
+                                    <img class="slide-image" src="images/crafts.jpg" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="kids-mountain.jpg" alt="">
+                                    <img class="slide-image" src="images/kids-mountain.jpg" alt="">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -107,18 +109,18 @@
         <div class="row">
             <div class="col-sm-8">
                 <h2 id="do">What We Do</h2>
-                <p>We offer a wide variety of options in out camps! From one to three week programs, you're kids will come home begging to retun. </p>
+                <p>We offer a wide variety of options in out camps! From one to two week programs, your kids will come home begging to return. </p>
                 <p>Every day is a new adventure at KOWH Camps. Our extensive range of activity options offers campers incredible ways to grow and have fun. As campers take on new challenges and enjoy old favorites, they develop their skills and confidence, all while having the time of their lives.</p>
 
                 <p>Our  program is built around our three fields – athletics, arts, and adventure. In addition, we have exclusive KOWH Camp activities created by our very own counselors. As you’ll see below, the broad range of activity choices offers something for every camper every day!</p>
 
-                <p> Enroll now to jump start your childs summer experience!</p>
+                <p> Enroll now to jump start your child's summer experience!</p>
                 <p>
                     <a class="btn btn-default btn-lg" href="registration.html">Enroll Now! &raquo;</a>
                 </p>
             </div>
             <div class="col-sm-4">
-            <img src="logo.png" alt="logo" height="100" width="100">
+            <img src="images/logo.png" alt="logo" height="100" width="100">
                 <h2>Contact Us</h2>
                 <address>
                     <strong>KOWH Camps</strong>
@@ -139,7 +141,7 @@
         <h1 id="activities">Activities </h1>
         <div class="row">
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="active.jpg" alt="active">
+                <img class="img-circle img-responsive img-center" src="images/active.jpg" alt="active">
                 <h2>Athletics</h2>
                 <p>The athletics trail consists of a wide variety of both individual and team sports. Campers improve their skills, learn new ones, and most of all have fun!</p>
                 <ol style="list-style-type:disc">
@@ -162,7 +164,7 @@
                 </ol>
             </div>
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="art.jpg" alt="art">
+                <img class="img-circle img-responsive img-center" src="images/art.jpg" alt="art">
                 <h2>Arts and Crafts</h2>
                 <p>The arts trail consists of creative and performing arts and gives campers the opportunity to express themselves and create their own personal masterpieces.</p>
                 <ol style="list-style-type:disc">
@@ -178,12 +180,11 @@
                     <li> Arts and Crafts </li> <br>
                     <li> Dance </li> <br>
                     <li> Cooking </li> <br>
-                    <li> Table Tennis </li> <br>
                     <li> Wacky Science </li> <br>
                 </ol>
             </div>
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="adventure.jpg" alt="adventure">
+                <img class="img-circle img-responsive img-center" src="images/adventure.jpg" alt="adventure">
                 <h2>Adventure</h2>
                 <p>The adventure trail gives campers the opportunity to test their limits, push their boundaries, learn teamwork, overcome obstacles and reach new heights.</p>
                  <ol style="list-style-type:disc">
@@ -205,42 +206,49 @@
             </div>
         </div>
         <!-- /.row -->
-        
-       
-        <hr>
-       <div id="games">
+
+        <div id="row">
         <h2>Activity Examples </h2>
-      <p>Here are just a couple of games your kids can learn to write up in our copmuter coding activity. Feel free to play and enjoy yourself!</p>
+        <p>Here are just a couple of games your kids can learn to write up in our computer coding activity. Feel free to play and enjoy yourself!</p>
 
-      <div id ="game1div">
-        <h3>Helicopter Game</h3>
-        <div id="game1"> </div>
-        <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-        <p>Click the ACCELERATE button to start the game</p>
-        <p>How long can you stay alive? Use the ACCELERATE button to stay in the air..</p>
-      </div>
+        <div id ="row">
+            <h3>Helicopter Game</h3>
+		<canvas id="game1" width="450" height="300"></canvas><br>
+                <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+                <p>Click the ACCELERATE button to start the game</p>
+		<button type="button" onclick="window.location.reload();" name="button1">Restart</button><br>
+                <p>How long can you stay alive? Use the ACCELERATE button to stay in the air..</p>
+        </div>
 
-      <div id ="game2div">
-        <h3>Snake Game</h3>
-        <div id="msg"></div>
-        <canvas id="playArea" width="450" height="300">Sorry your browser does not support HTML5</canvas>
+        <div id ="row">
+            <h3>Snake Game</h3>
+            <div id="msg"></div>
+                <canvas id="playArea" width="450" height="300">Sorry your browser does not support HTML5</canvas><br>
+                <button id="hide_button" type="button" onclick="play_game(), hide()" name="button"> Play Snake</button>
 
-        <div> <p>Use arrow keys to move. Spacebar to pause.</p> </div>
-      </div>
-      </div>
+             <div> <p>Use arrow keys to move. Spacebar to pause.</p> </div>
+        </div>
     </div>
-</div>
-    <hr>
-
-     <footer>
+        <!-- Footer -->
+        <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p> <img src="logo.png" alt="logo" height="100" width="100">Copyright &copy; KOWH Camps 2017</p>
-                   <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    <p> <img src="images/logo.png" alt="logo" height="100" width="100">Copyright &copy; KOWH Camps 2017</p>
                 </div>
             </div>
 
         </footer>
+       
+        <hr>
+
+
+    </div>
+</div>
+
+
+    <hr>
+
+     
 
     <script src="game1.js"></script>
     <script src="game2.js"></script>

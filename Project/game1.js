@@ -10,12 +10,11 @@ function startGame() {
 }
 
 var myGameArea = {
-    canvas : document.createElement("canvas"),
+    canvas : document.getElementById("game1"),
     start : function() {
         this.canvas.width = 480;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
-        document.getElementById("game1").appendChild(this.canvas);
         this.frameNo = 0;
         updateGameArea();
         },
@@ -112,7 +111,7 @@ function everyinterval(n) {
 }
 
 function accelerate(n) {
-    if (!myGameArea.interval) {myGameArea.interval = setInterval(updateGameArea, 20);}
+    if (!myGameArea.interval) {myGameArea.interval = setInterval(updateGameArea, 10);}
 
     myGamePiece.gravity = n;
 }

@@ -1,3 +1,14 @@
+var c = document.getElementById('playArea');
+
+function hide() {
+    var x = document.getElementById('hide_button');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
 function play_game()
 {
 var level = 100; // Game level, by decreasing will speed up
@@ -23,6 +34,37 @@ var i, dir;
 // getting play area
 var c = document.getElementById('playArea');
 ctx = c.getContext('2d');
+c.addEventListener('keydown', function(e){
+    move = false;
+    x = false;
+    y = false;
+    var keycode;
+    if (window.event) keycode = window.event.keyCode;
+    else if (e) keycode = e.which;
+    switch(keycode){
+        case 37:
+            move = true;
+            x = 'negative';
+        break;
+        case 38:
+            move = true;
+            y = 'negative'
+        break;
+        case 39:
+            move = true;
+            x = 'positive'
+        break;
+        case 40:
+            move = true;
+            y = 'positive'
+        break;
+    }
+    //if(move){
+    //    animation.move(x,y);
+    //}
+    e.preventDefault();
+    return false;
+})
 // Map positions
 for (i = 0; i < rect_w; i++)
 {
@@ -46,6 +88,8 @@ ctx.strokeRect(x * 10+1, y * 10+1, 8, 8);
 rand_frog();
 function set_game_speed()
 {
+  c.setAttribute('tabindex','0');
+  c.focus();
 if (easy)
 {
 X = (X+rect_w)%rect_w;
